@@ -12,9 +12,9 @@ I     request Version
 F     request Specificaton
 T01   request Test for 1 minute
 
-The response to each command are:
+The responses to each command are:
 
-Q1: Length = 47, Bitmap = 00101000:
+Q1: L length = 47, B bitmap = 00101000:
 
 LB240.0 000.0 241.0 000 49.0 14.2 30.8 00001000cr (L: Length, B: Bitmap)
 
@@ -28,10 +28,10 @@ The values are in plain text and represent in order:
 - Temperature ((for this UPS always 30.8)
 - Bitmap First 0 becomes 1 when the power cuts off, sixth 0 becomes 1 while in test mode
 
-I: Length = 39,Bitmap = 00100011:
+I: L length = 39,B bitmap = 00100011:
 
 LB                           V6.00     cr (L: Length, B: Bitmap)
 
-F: Length = 22,Bitmap = 00100011:
+F: L length = 22,B bitmap = 00100011:
 
 LB220.0 003 12.00 50.0cr (L: Length, B: Bitmap)
