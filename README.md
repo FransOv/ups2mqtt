@@ -17,7 +17,7 @@ The response to each command are:
 Q1: Length = 47, Bitmap = 00101000:
 
 LB240.0 000.0 241.0 000 49.0 14.2 30.8 00001000cr (L: Length, B: Bitmap)
-          0        0         0         0
+
 The values are in plain text and represent in order:
 - Input Voltage
 - Load (this particular UPS does not seem to provide the laod)
