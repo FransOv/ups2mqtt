@@ -1,7 +1,7 @@
 # ups2mqtt
 Publishing the information of a Vultech UPS that uses the RichComm PowerManager II Protocol
 
-The Vultech UPS1400VA-LFP comes with the RichComm PowerManager II program. However this program does not provide for any commmunication to a Home Automation system. Thanks to sites like https://github.com/networkupstools/nut I was able to find information to access the UPS via USB and theerafter to decode the relevant parts of the protocol with WireShark. 
+The Vultech UPS1400VA-LFP comes with the RichComm PowerManager II program. However this program does not provide for any commmunication to a Home Automation system. Thanks to sites like https://github.com/networkupstools/nut I was able to find information to access the UPS via USB and thereafter to decode the relevant parts of the protocol with WireShark. 
 
 It turns out to be a rather simple protocol although the learning curve for accessing a USB device in Python was rather steep.
 Only 4 commands are needed and in fact it could also be done with only one command, the Q1 command.
