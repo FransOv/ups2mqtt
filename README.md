@@ -35,3 +35,6 @@ LB                           V6.00     cr (L: Length, B: Bitmap)
 F: L length = 22,B bitmap = 00100011:
 
 LB220.0 003 12.00 50.0cr (L: Length, B: Bitmap)
+
+The data as imported in Home Assistant by way of MQTT looks like this:
+https://github.com/FransOv/ups2mqtt/blob/1a40c87c1fcc256df8eae40bcc3249a53f97e1c8/images/upps2mqtt_data.png
