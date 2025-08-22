@@ -5,7 +5,7 @@ The Vultech UPS1400VA-LFP comes with the RichComm PowerManager II program. Howev
 
 It turns out to be a rather simple protocol although the learning curve for accessing a USB device in Python was rather steep.
 Only 4 commands are needed and in fact it could also be done with only one command, the Q1 command.
-The structure of the comamnds is:
+The structure of the commands is:
 Header Byte (1010 111 High order 2 bits + length) + data + \r
 Q1    request Data Packet
 I     request Version
@@ -20,7 +20,7 @@ LB240.0 000.0 241.0 000 49.0 14.2 30.8 00001000cr (L: Length, B: Bitmap)
 
 The values are in plain text and represent in order:
 - Input Voltage
-- Load (this particular UPS does not seem to provide the laod)
+- Load (this particular UPS does not seem to provide the load)
 - Output Voltage
 - ??
 - Frequency
