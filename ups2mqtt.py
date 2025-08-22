@@ -109,8 +109,8 @@ def mainloop():
             if mqtt.test_required:
                 print(f"UPS2MQTT: Testmode for {mqtt.test_minutes} minutes.")
                 mqtt.test_required=False
-                #TST=bytearray(f"T{mqtt.test_minutes:02d}\r","utf-8")
-                #TST=bytearray([0xa0|len(TST)])+TST
+                TST=bytearray(f"T{mqtt.test_minutes:02d}\r","utf-8")
+                TST=bytearray([0xa0|len(TST)])+TST
                 dev.write(0x02,TST,1000)
 
 
