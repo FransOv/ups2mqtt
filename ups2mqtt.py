@@ -101,8 +101,8 @@ def mainloop():
             if mqtt.reconnect_required:
                 print("UPS2MQTT: Reconnecting.")
                 mqtt.reconnect_required=False
-                dev.reset()       # By way of reset, only one configuration so default is ok
-                sleep(mqtt.poll_interval*2)   # Give it some time
+                dev.reset()                   # Reset the device and the connection
+                sleep(mqtt.poll_interval)     # Give it some time
                 dev=usb_connect(0x925,0x1234) # and try to connect again
                 if dev is None:               # No Go, so quit
                     sys.exit("UPS2MQTT: Could not Reconnect USB")
@@ -111,8 +111,9 @@ def mainloop():
                 mqtt.test_required=False
                 TST=bytearray(f"T{mqtt.test_minutes:02d}\r","utf-8")
                 TST=bytearray([0xa0|len(TST)])+TST
+                print(TST)
                 dev.write(0x02,TST,1000)
-
+                sleep(mqtt.poll_interval)    # give it some time to set up test mode otherwise test will not work
 
 if __name__ == "__main__":
     mainloop()
