@@ -55,14 +55,13 @@ def connect_mqtt():
     global mqtt_client
     try:
         mqtt_client = paho.Client(paho.CallbackAPIVersion.VERSION2)
-        mqtt_client.username_pw_set("hamqtt", password="hamqtt")
-        mqtt_client.connect("192.168.2.33",1883)
+        mqtt_client.username_pw_set("xxxx", password="xxxx")
+        mqtt_client.connect("xxx.xxx.xxx.xxx",1883)
         mqtt_client.on_connect = on_connect
         mqtt_client.on_disconnect = on_disconnect
         mqtt_client.on_message = on_message
         mqtt_client.will_set("ups/LWT", "offline", qos=0,  retain=True)
         mqtt_client.on_subscribe = on_subscribe
-        mqtt_client.connect("192.168.2.33",1883)
         mqtt_client.reconnect_delay_set(min_delay=1, max_delay=30)
         mqtt_client.loop_start()
     except Exception as e:
