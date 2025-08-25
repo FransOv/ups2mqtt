@@ -40,6 +40,7 @@ The data as imported in Home Assistant by way of MQTT looks like this:
 ![RichComm Data](https://github.com/FransOv/ups2mqtt/blob/1a40c87c1fcc256df8eae40bcc3249a53f97e1c8/images/upps2mqtt_data.png)
 
 Battery State Of Charge (SOC) is calculated from battery voltage. This value is not accurate (to low) during AC Fault state.
+
 The program runs on an Orange Pi Zero 3 sitting on the UPS. It's a tiny computer with just enough interfaces for this job:
 
 ![Vultech 1400VA-LFP](https://github.com/FransOv/ups2mqtt/blob/e768c22cd3b48a17c98a02bbc23312a12319e89b/images/Vultech-UPS1400VA-LFP.png) 
